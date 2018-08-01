@@ -1,0 +1,779 @@
+2018-07-28 09:21:31,544: Tracking: tracking
+2018-07-28 09:21:31,545: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d1a0f60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d1a03c8>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d1a0e48>]}
+2018-07-28 09:21:33,186: Loading dependency project from /usr/local/Cellar/dbt/0.10.1/libexec/lib/python3.6/site-packages/dbt/include
+2018-07-28 09:21:33,310: Loading dependency project from /Users/davidkrevitt/Dropbox/CIFL/adp-models/ga-conversion-index/dbt_modules
+2018-07-28 09:21:33,319: Parsing get_column_values.sql
+2018-07-28 09:21:33,477: Parsing core.sql
+2018-07-28 09:21:33,736: Parsing adapters/bigquery.sql
+2018-07-28 09:21:33,755: Parsing adapters/common.sql
+2018-07-28 09:21:34,033: Parsing adapters/redshift.sql
+2018-07-28 09:21:34,119: Parsing adapters/snowflake.sql
+2018-07-28 09:21:34,126: Parsing etc/bigquery.sql
+2018-07-28 09:21:34,133: Parsing etc/datetime.sql
+2018-07-28 09:21:34,196: Parsing etc/get_custom_schema.sql
+2018-07-28 09:21:34,208: Parsing materializations/helpers.sql
+2018-07-28 09:21:34,234: Parsing materializations/archive/archive.sql
+2018-07-28 09:21:34,290: Parsing materializations/incremental/incremental.sql
+2018-07-28 09:21:34,331: Parsing materializations/seed/bigquery.sql
+2018-07-28 09:21:34,342: Parsing materializations/seed/seed.sql
+2018-07-28 09:21:34,422: Parsing materializations/table/bigquery_table.sql
+2018-07-28 09:21:34,509: Parsing materializations/table/table.sql
+2018-07-28 09:21:34,559: Parsing materializations/view/bigquery_view.sql
+2018-07-28 09:21:34,619: Parsing materializations/view/view.sql
+2018-07-28 09:21:34,968: Parsing schema_tests/accepted_values.sql
+2018-07-28 09:21:34,981: Parsing schema_tests/not_null.sql
+2018-07-28 09:21:35,003: Parsing schema_tests/relationships.sql
+2018-07-28 09:21:35,013: Parsing schema_tests/unique.sql
+2018-07-28 09:21:35,121: Parsing model.ga_conversion_index.accounts_proc
+2018-07-28 09:21:35,131: Parsing model.ga_conversion_index.conversion_goals_proc
+2018-07-28 09:21:35,213: Parsing model.ga_conversion_index.mappings_ga_proc
+2018-07-28 09:21:35,225: Parsing model.ga_conversion_index.ga_conversions
+2018-07-28 09:21:35,231: Parsing model.ga_conversion_index.ga_proc
+2018-07-28 09:21:35,280: Parsing model.ga_conversion_index.ga_stats
+2018-07-28 09:21:35,371: Parsing model.ga_conversion_index.landing_page_by_month
+2018-07-28 09:21:35,379: Parsing model.ga_conversion_index.landing_page_index
+2018-07-28 09:21:35,391: Parsing model.ga_conversion_index.platform_by_month
+2018-07-28 09:21:35,410: Parsing model.ga_conversion_index.platform_index
+2018-07-28 09:21:35,465: Parsing model.ga_conversion_index.landing_page_viz
+2018-07-28 09:21:35,508: Parsing model.ga_conversion_index.platform_viz
+2018-07-28 09:21:35,643: Found 12 models, 0 tests, 0 archives, 0 analyses, 57 macros, 0 operations, 0 seed files
+2018-07-28 09:21:35,742: 
+2018-07-28 09:21:35,829: Acquiring new bigquery connection "master".
+2018-07-28 09:21:35,832: Opening a new connection (0 currently allocated)
+2018-07-28 09:21:37,789: 09:21:37 | Concurrency: 4 threads (target='dev')
+2018-07-28 09:21:37,789: 09:21:37 | 
+2018-07-28 09:21:37,832: 09:21:37 | 1 of 12 START table model agency_data_pipeline_dev.mappings_ga_proc.. [RUN]
+2018-07-28 09:21:37,832: Compiling model.ga_conversion_index.mappings_ga_proc
+2018-07-28 09:21:37,832: 09:21:37 | 2 of 12 START table model agency_data_pipeline_dev.accounts_proc..... [RUN]
+2018-07-28 09:21:37,839: Compiling model.ga_conversion_index.accounts_proc
+2018-07-28 09:21:37,838: Writing injected SQL for node "model.ga_conversion_index.mappings_ga_proc"
+2018-07-28 09:21:37,845: Writing injected SQL for node "model.ga_conversion_index.accounts_proc"
+2018-07-28 09:21:37,832: 09:21:37 | 3 of 12 START table model agency_data_pipeline_dev.conversion_goals_proc [RUN]
+2018-07-28 09:21:37,846: Compiling model.ga_conversion_index.conversion_goals_proc
+2018-07-28 09:21:37,852: Writing injected SQL for node "model.ga_conversion_index.conversion_goals_proc"
+2018-07-28 09:21:37,854: Acquiring new bigquery connection "mappings_ga_proc".
+2018-07-28 09:21:37,854: Opening a new connection (1 currently allocated)
+2018-07-28 09:21:37,855: Acquiring new bigquery connection "conversion_goals_proc".
+2018-07-28 09:21:37,856: Acquiring new bigquery connection "accounts_proc".
+2018-07-28 09:21:37,858: Opening a new connection (2 currently allocated)
+2018-07-28 09:21:37,860: Opening a new connection (3 currently allocated)
+2018-07-28 09:21:38,748: Writing runtime SQL for node "model.ga_conversion_index.conversion_goals_proc"
+2018-07-28 09:21:38,748: Writing runtime SQL for node "model.ga_conversion_index.mappings_ga_proc"
+2018-07-28 09:21:38,755: Writing runtime SQL for node "model.ga_conversion_index.accounts_proc"
+2018-07-28 09:21:38,756: Fetching data for query accounts_proc:
+create or replace table `agency_data_pipeline_dev`.`accounts_proc`
+  
+  as (
+    SELECT
+site,
+bigquery_name,
+account,
+platform
+FROM  (
+ 
+	SELECT  
+	site,
+	bigquery_name,
+	account,
+	platform,
+	time_of_entry,
+	first_value(time_of_entry) OVER (PARTITION BY site ORDER BY time_of_entry DESC) lv
+	FROM `agency-data-pipeline.agency_data_pipeline.accounts`
+) 
+
+WHERE lv = time_of_entry
+  );
+
+    
+2018-07-28 09:21:38,760: Fetching data for query mappings_ga_proc:
+create or replace table `agency_data_pipeline_dev`.`mappings_ga_proc`
+  
+  as (
+    SELECT
+site,
+account,
+bigquery_name,
+source,
+medium,
+max(platform_n) platform,
+max(channel_n) channel,
+time_of_entry
+FROM  ( 
+
+	SELECT  
+	site,
+	account,
+	bigquery_name,
+	source,
+	medium,
+	platform as platform_n,
+	channel as channel_n,
+	time_of_entry,
+	first_value(time_of_entry) OVER (PARTITION BY site ORDER BY time_of_entry DESC) lv
+	FROM `agency-data-pipeline.agency_data_pipeline.mappings_ga` 
+
+) 
+
+WHERE lv = time_of_entry
+group by site, account, bigquery_name, source, medium, platform_n, channel_n, time_of_entry
+  );
+
+    
+2018-07-28 09:21:38,764: Fetching data for query conversion_goals_proc:
+create or replace table `agency_data_pipeline_dev`.`conversion_goals_proc`
+  
+  as (
+    SELECT 
+site,
+bigquery_name,
+platform,
+goal_name,
+max(goal_type) goal_type,
+account,
+max(time_of_entry) time_of_entry
+FROM  ( 
+
+	SELECT  
+	site,
+	bigquery_name,
+	platform,
+	trim(replace(replace(lower(goal_name),',',''),' ','')) goal_name,
+	goal_type,
+	account,
+	time_of_entry,
+	first_value(time_of_entry) OVER (PARTITION BY platform ORDER BY time_of_entry DESC) lv
+	FROM `agency-data-pipeline.agency_data_pipeline.conversion_goals` 
+
+) 
+
+WHERE lv = time_of_entry
+group by site, bigquery_name, platform, account, goal_name
+  );
+
+    
+2018-07-28 09:21:39,067: Bad request while running:
+create dataset
+2018-07-28 09:21:39,067: 400 The project agency-data-pipeline has not enabled BigQuery.
+2018-07-28 09:21:39,067: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '20572e4a-8e52-4eea-926f-8551ce0985ec', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109f90710>]}
+2018-07-28 09:21:39,114: Bad request while running:
+create dataset
+2018-07-28 09:21:39,114: 400 The project agency-data-pipeline has not enabled BigQuery.
+2018-07-28 09:21:39,114: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '20572e4a-8e52-4eea-926f-8551ce0985ec', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109f984a8>]}
+2018-07-28 09:21:39,117: Bad request while running:
+create dataset
+2018-07-28 09:21:39,117: 400 The project agency-data-pipeline has not enabled BigQuery.
+2018-07-28 09:21:39,117: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '20572e4a-8e52-4eea-926f-8551ce0985ec', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109f90f28>]}
+2018-07-28 09:21:39,633: 09:21:39 | 1 of 12 ERROR creating table model agency_data_pipeline_dev.mappings_ga_proc [ERROR in 1.24s]
+2018-07-28 09:21:39,862: 09:21:39 | 3 of 12 ERROR creating table model agency_data_pipeline_dev.conversion_goals_proc [ERROR in 1.27s]
+2018-07-28 09:21:40,089: 09:21:40 | 2 of 12 ERROR creating table model agency_data_pipeline_dev.accounts_proc [ERROR in 1.28s]
+2018-07-28 09:21:40,090: 09:21:40 | 4 of 12 SKIP relation agency_data_pipeline_dev.ga_conversions........ [SKIP]
+2018-07-28 09:21:40,091: 09:21:40 | 5 of 12 SKIP relation agency_data_pipeline_dev.ga_proc............... [SKIP]
+2018-07-28 09:21:40,092: 09:21:40 | 6 of 12 SKIP relation agency_data_pipeline_dev.ga_stats.............. [SKIP]
+2018-07-28 09:21:40,092: 09:21:40 | 7 of 12 SKIP relation agency_data_pipeline_dev.platform_by_month..... [SKIP]
+2018-07-28 09:21:40,093: 09:21:40 | 8 of 12 SKIP relation agency_data_pipeline_dev.landing_page_by_month. [SKIP]
+2018-07-28 09:21:40,093: 09:21:40 | 9 of 12 SKIP relation agency_data_pipeline_dev.landing_page_index.... [SKIP]
+2018-07-28 09:21:40,094: 09:21:40 | 10 of 12 SKIP relation agency_data_pipeline_dev.platform_index....... [SKIP]
+2018-07-28 09:21:40,095: 09:21:40 | 11 of 12 SKIP relation agency_data_pipeline_dev.landing_page_viz..... [SKIP]
+2018-07-28 09:21:40,096: 09:21:40 | 12 of 12 SKIP relation agency_data_pipeline_dev.platform_viz......... [SKIP]
+2018-07-28 09:21:40,126: 09:21:40 | 
+2018-07-28 09:21:40,126: 09:21:40 | Finished running 12 table models in 4.38s.
+2018-07-28 09:21:40,126: Connection 'master' was left open.
+2018-07-28 09:21:40,126: 
+2018-07-28 09:21:40,126: Completed with 3 errors:
+2018-07-28 09:21:40,127: 
+2018-07-28 09:21:40,127: Database Error in model mappings_ga_proc (models/admin/mappings_ga_proc.sql)
+2018-07-28 09:21:40,127:   The project agency-data-pipeline has not enabled BigQuery.
+2018-07-28 09:21:40,127:   compiled SQL at target/run/ga_conversion_index/admin/mappings_ga_proc.sql
+2018-07-28 09:21:40,127: 
+2018-07-28 09:21:40,127: Database Error in model conversion_goals_proc (models/admin/conversion_goals_proc.sql)
+2018-07-28 09:21:40,127:   The project agency-data-pipeline has not enabled BigQuery.
+2018-07-28 09:21:40,127:   compiled SQL at target/run/ga_conversion_index/admin/conversion_goals_proc.sql
+2018-07-28 09:21:40,128: 
+2018-07-28 09:21:40,128: Database Error in model accounts_proc (models/admin/accounts_proc.sql)
+2018-07-28 09:21:40,128:   The project agency-data-pipeline has not enabled BigQuery.
+2018-07-28 09:21:40,128:   compiled SQL at target/run/ga_conversion_index/admin/accounts_proc.sql
+2018-07-28 09:21:40,128: 
+Done. PASS=0 ERROR=3 SKIP=9 TOTAL=12
+2018-07-28 09:21:40,129: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d1a0f60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d264eb8>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d264b38>]}
+2018-07-28 09:21:40,368: Flushing usage events
+2018-07-28 09:21:40,684: sys:1: ResourceWarning: unclosed <socket.socket fd=12, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.5.50.21', 57627), raddr=('172.217.2.10', 443)>
+
+2018-07-28 09:21:40,685: sys:1: ResourceWarning: unclosed <socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.5.50.21', 57623), raddr=('172.217.2.13', 443)>
+
+2018-07-28 09:21:40,686: sys:1: ResourceWarning: unclosed <socket.socket fd=13, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.5.50.21', 57633), raddr=('172.217.2.13', 443)>
+
+2018-07-28 09:21:40,686: sys:1: ResourceWarning: unclosed <socket.socket fd=14, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.5.50.21', 57634), raddr=('172.217.2.13', 443)>
+
+2018-07-28 09:21:40,686: sys:1: ResourceWarning: unclosed <socket.socket fd=15, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.5.50.21', 57635), raddr=('172.217.2.13', 443)>
+
+2018-07-28 09:21:40,687: sys:1: ResourceWarning: unclosed <socket.socket fd=17, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.5.50.21', 57637), raddr=('172.217.11.234', 443)>
+
+2018-07-28 09:21:40,687: sys:1: ResourceWarning: unclosed <socket.socket fd=16, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.5.50.21', 57636), raddr=('172.217.11.234', 443)>
+
+2018-07-28 09:21:40,687: sys:1: ResourceWarning: unclosed <socket.socket fd=18, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.5.50.21', 57638), raddr=('172.217.11.234', 443)>
+
+2018-07-28 09:26:33,866: Tracking: tracking
+2018-07-28 09:26:33,868: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10f26ce80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10f26c2b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10f26ccf8>]}
+2018-07-28 09:26:35,366: Loading dependency project from /usr/local/Cellar/dbt/0.10.1/libexec/lib/python3.6/site-packages/dbt/include
+2018-07-28 09:26:35,513: Loading dependency project from /Users/davidkrevitt/Dropbox/CIFL/adp-models/ga-conversion-index/dbt_modules
+2018-07-28 09:26:35,521: Parsing get_column_values.sql
+2018-07-28 09:26:35,573: Parsing core.sql
+2018-07-28 09:26:35,621: Parsing adapters/bigquery.sql
+2018-07-28 09:26:35,656: Parsing adapters/common.sql
+2018-07-28 09:26:35,708: Parsing adapters/redshift.sql
+2018-07-28 09:26:35,774: Parsing adapters/snowflake.sql
+2018-07-28 09:26:35,780: Parsing etc/bigquery.sql
+2018-07-28 09:26:35,786: Parsing etc/datetime.sql
+2018-07-28 09:26:35,834: Parsing etc/get_custom_schema.sql
+2018-07-28 09:26:35,850: Parsing materializations/helpers.sql
+2018-07-28 09:26:35,872: Parsing materializations/archive/archive.sql
+2018-07-28 09:26:35,924: Parsing materializations/incremental/incremental.sql
+2018-07-28 09:26:35,976: Parsing materializations/seed/bigquery.sql
+2018-07-28 09:26:36,005: Parsing materializations/seed/seed.sql
+2018-07-28 09:26:36,097: Parsing materializations/table/bigquery_table.sql
+2018-07-28 09:26:36,160: Parsing materializations/table/table.sql
+2018-07-28 09:26:36,207: Parsing materializations/view/bigquery_view.sql
+2018-07-28 09:26:36,234: Parsing materializations/view/view.sql
+2018-07-28 09:26:36,292: Parsing schema_tests/accepted_values.sql
+2018-07-28 09:26:36,297: Parsing schema_tests/not_null.sql
+2018-07-28 09:26:36,303: Parsing schema_tests/relationships.sql
+2018-07-28 09:26:36,308: Parsing schema_tests/unique.sql
+2018-07-28 09:26:36,336: Parsing model.ga_conversion_index.accounts_proc
+2018-07-28 09:26:36,340: Parsing model.ga_conversion_index.conversion_goals_proc
+2018-07-28 09:26:36,343: Parsing model.ga_conversion_index.mappings_ga_proc
+2018-07-28 09:26:36,345: Parsing model.ga_conversion_index.ga_conversions
+2018-07-28 09:26:36,352: Parsing model.ga_conversion_index.ga_proc
+2018-07-28 09:26:36,386: Parsing model.ga_conversion_index.ga_stats
+2018-07-28 09:26:36,391: Parsing model.ga_conversion_index.landing_page_by_month
+2018-07-28 09:26:36,395: Parsing model.ga_conversion_index.landing_page_index
+2018-07-28 09:26:36,402: Parsing model.ga_conversion_index.platform_by_month
+2018-07-28 09:26:36,412: Parsing model.ga_conversion_index.platform_index
+2018-07-28 09:26:36,420: Parsing model.ga_conversion_index.landing_page_viz
+2018-07-28 09:26:36,425: Parsing model.ga_conversion_index.platform_viz
+2018-07-28 09:26:36,460: Found 12 models, 0 tests, 0 archives, 0 analyses, 57 macros, 0 operations, 0 seed files
+2018-07-28 09:26:36,468: 
+2018-07-28 09:26:36,587: Acquiring new bigquery connection "master".
+2018-07-28 09:26:36,587: Opening a new connection (0 currently allocated)
+2018-07-28 09:26:38,257: 09:26:38 | Concurrency: 4 threads (target='dev')
+2018-07-28 09:26:38,257: 09:26:38 | 
+2018-07-28 09:26:38,321: 09:26:38 | 1 of 12 START table model agency_data_pipeline_dev.mappings_ga_proc.. [RUN]
+2018-07-28 09:26:38,322: Compiling model.ga_conversion_index.mappings_ga_proc
+2018-07-28 09:26:38,321: 09:26:38 | 2 of 12 START table model agency_data_pipeline_dev.accounts_proc..... [RUN]
+2018-07-28 09:26:38,327: Compiling model.ga_conversion_index.accounts_proc
+2018-07-28 09:26:38,341: Writing injected SQL for node "model.ga_conversion_index.mappings_ga_proc"
+2018-07-28 09:26:38,321: 09:26:38 | 3 of 12 START table model agency_data_pipeline_dev.conversion_goals_proc [RUN]
+2018-07-28 09:26:38,346: Writing injected SQL for node "model.ga_conversion_index.accounts_proc"
+2018-07-28 09:26:38,347: Compiling model.ga_conversion_index.conversion_goals_proc
+2018-07-28 09:26:38,349: Acquiring new bigquery connection "mappings_ga_proc".
+2018-07-28 09:26:38,358: Writing injected SQL for node "model.ga_conversion_index.conversion_goals_proc"
+2018-07-28 09:26:38,358: Opening a new connection (1 currently allocated)
+2018-07-28 09:26:38,361: Acquiring new bigquery connection "accounts_proc".
+2018-07-28 09:26:38,364: Acquiring new bigquery connection "conversion_goals_proc".
+2018-07-28 09:26:38,369: Opening a new connection (2 currently allocated)
+2018-07-28 09:26:38,372: Opening a new connection (3 currently allocated)
+2018-07-28 09:26:38,657: Writing runtime SQL for node "model.ga_conversion_index.accounts_proc"
+2018-07-28 09:26:38,658: Fetching data for query accounts_proc:
+create or replace table `agency_data_pipeline_dev`.`accounts_proc`
+  
+  as (
+    SELECT
+site,
+bigquery_name,
+account,
+platform
+FROM  (
+ 
+	SELECT  
+	site,
+	bigquery_name,
+	account,
+	platform,
+	time_of_entry,
+	first_value(time_of_entry) OVER (PARTITION BY site ORDER BY time_of_entry DESC) lv
+	FROM `adp-apprenticeship.agency_data_pipeline.accounts`
+) 
+
+WHERE lv = time_of_entry
+  );
+
+    
+2018-07-28 09:26:38,664: Writing runtime SQL for node "model.ga_conversion_index.conversion_goals_proc"
+2018-07-28 09:26:38,671: Fetching data for query conversion_goals_proc:
+create or replace table `agency_data_pipeline_dev`.`conversion_goals_proc`
+  
+  as (
+    SELECT 
+site,
+bigquery_name,
+platform,
+goal_name,
+max(goal_type) goal_type,
+account,
+max(time_of_entry) time_of_entry
+FROM  ( 
+
+	SELECT  
+	site,
+	bigquery_name,
+	platform,
+	trim(replace(replace(lower(goal_name),',',''),' ','')) goal_name,
+	goal_type,
+	account,
+	time_of_entry,
+	first_value(time_of_entry) OVER (PARTITION BY platform ORDER BY time_of_entry DESC) lv
+	FROM `adp-apprenticeship.agency_data_pipeline.conversion_goals` 
+
+) 
+
+WHERE lv = time_of_entry
+group by site, bigquery_name, platform, account, goal_name
+  );
+
+    
+2018-07-28 09:26:38,704: Writing runtime SQL for node "model.ga_conversion_index.mappings_ga_proc"
+2018-07-28 09:26:38,705: Fetching data for query mappings_ga_proc:
+create or replace table `agency_data_pipeline_dev`.`mappings_ga_proc`
+  
+  as (
+    SELECT
+site,
+account,
+bigquery_name,
+source,
+medium,
+max(platform_n) platform,
+max(channel_n) channel,
+time_of_entry
+FROM  ( 
+
+	SELECT  
+	site,
+	account,
+	bigquery_name,
+	source,
+	medium,
+	platform as platform_n,
+	channel as channel_n,
+	time_of_entry,
+	first_value(time_of_entry) OVER (PARTITION BY site ORDER BY time_of_entry DESC) lv
+	FROM `adp-apprenticeship.agency_data_pipeline.mappings_ga` 
+
+) 
+
+WHERE lv = time_of_entry
+group by site, account, bigquery_name, source, medium, platform_n, channel_n, time_of_entry
+  );
+
+    
+2018-07-28 09:26:40,804: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8c9b46a6-0c16-40b6-be9e-4398dde07673', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10f3780f0>]}
+2018-07-28 09:26:40,818: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8c9b46a6-0c16-40b6-be9e-4398dde07673', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10f3a1278>]}
+2018-07-28 09:26:40,968: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8c9b46a6-0c16-40b6-be9e-4398dde07673', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10f3b2550>]}
+2018-07-28 09:26:41,590: 09:26:41 | 1 of 12 OK created table model agency_data_pipeline_dev.mappings_ga_proc [OK in 2.48s]
+2018-07-28 09:26:42,717: 09:26:42 | 2 of 12 OK created table model agency_data_pipeline_dev.accounts_proc [OK in 2.49s]
+2018-07-28 09:26:43,356: 09:26:43 | 3 of 12 OK created table model agency_data_pipeline_dev.conversion_goals_proc [OK in 2.62s]
+2018-07-28 09:26:43,357: 09:26:43 | 4 of 12 START table model agency_data_pipeline_dev.ga_conversions.... [RUN]
+2018-07-28 09:26:43,357: Compiling model.ga_conversion_index.ga_conversions
+2018-07-28 09:26:43,370: Writing injected SQL for node "model.ga_conversion_index.ga_conversions"
+2018-07-28 09:26:43,372: Acquiring new bigquery connection "ga_conversions".
+2018-07-28 09:26:43,373: Re-using an available connection from the pool.
+2018-07-28 09:26:43,601: Writing runtime SQL for node "model.ga_conversion_index.ga_conversions"
+2018-07-28 09:26:43,605: Fetching data for query ga_conversions:
+create or replace table `agency_data_pipeline_dev`.`ga_conversions`
+  
+  as (
+    SELECT 
+site,
+bigquery_name,
+platform,
+goal_name,
+goal_type,
+account,
+time_of_entry
+FROM `adp-apprenticeship`.`agency_data_pipeline_dev`.`conversion_goals_proc`
+WHERE platform = 'Google Analytics'
+  );
+
+    
+2018-07-28 09:26:45,410: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8c9b46a6-0c16-40b6-be9e-4398dde07673', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10f370048>]}
+2018-07-28 09:26:45,738: 09:26:45 | 4 of 12 OK created table model agency_data_pipeline_dev.ga_conversions [OK in 2.05s]
+2018-07-28 09:26:45,740: 09:26:45 | 5 of 12 START table model agency_data_pipeline_dev.ga_proc........... [RUN]
+2018-07-28 09:26:45,744: Compiling model.ga_conversion_index.ga_proc
+2018-07-28 09:26:45,855: Acquiring new bigquery connection "ga_proc".
+2018-07-28 09:26:45,859: Re-using an available connection from the pool.
+2018-07-28 09:26:45,879: Fetching data for query ga_proc:
+
+
+        select
+            bigquery_name as value
+
+        from `adp-apprenticeship`.`agency_data_pipeline_dev`.`accounts_proc`
+        where bigquery_name is not null
+        and bigquery_name != ''
+
+        
+        ##where 1 = 1
+        and platform = 'Google Analytics'
+        
+        
+        
+
+        group by 1
+        order by count(*) desc
+
+        
+        limit 50
+        
+2018-07-28 09:26:47,669: Fetching data for query ga_proc:
+
+
+        select
+            goal_name as value
+
+        from `adp-apprenticeship`.`agency_data_pipeline_dev`.`ga_conversions`
+        where goal_name is not null
+        and goal_name != ''
+
+        
+        ##where 1 = 1
+        and goal_type = 'Signup'
+        
+        
+        
+        ##and 2 = 2
+        and bigquery_name = 'cifl'
+        
+
+        group by 1
+        order by count(*) desc
+
+        
+        limit 50
+        
+2018-07-28 09:26:49,742: Writing injected SQL for node "model.ga_conversion_index.ga_proc"
+2018-07-28 09:26:50,228: Writing runtime SQL for node "model.ga_conversion_index.ga_proc"
+2018-07-28 09:26:50,229: Fetching data for query ga_proc:
+create or replace table `agency_data_pipeline_dev`.`ga_proc`
+  
+  as (
+    -- depends_on: `adp-apprenticeship`.`agency_data_pipeline_dev`.`ga_conversions`
+
+
+
+
+with ga_report as (
+
+	    
+
+	    	
+	    	
+		   	SELECT
+		   	'cifl' as bigquery_name,
+		   	'Google Analytics' as lookup_platform,
+			lower(trim(regexp_replace(replace(replace(replace(replace(CONCAT(hostname,landingpagepath),'www.',''),'http://',''),'https://',''),'.html',''),r'\?.*$',''),'/')) as url,
+			date,
+			lower(source) source,
+			lower(medium) medium,
+			lower(campaign) campaign,
+			sessions,
+			## goal completion columns
+			
+				
+					cast(goal1completions as int64) 
+					 
+					 as goal_completions,  
+				
+			
+			_sdc_sequence,
+			first_value(_sdc_sequence) OVER (PARTITION BY hostname, landingpagepath, date, source, medium, campaign ORDER BY _sdc_sequence DESC) lv
+			FROM `adp-apprenticeship.ga_cifl.report` 
+
+		    
+	   
+
+)
+
+
+SELECT 
+bigquery_name,
+lookup_platform,
+date,
+url,
+source,
+medium,
+sum(sessions) sessions,
+sum(goal_completions) goal_completions
+FROM ga_report
+where lv = _sdc_sequence
+group by bigquery_name, lookup_platform, date, url, source, medium
+
+
+  );
+
+    
+2018-07-28 09:26:53,031: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8c9b46a6-0c16-40b6-be9e-4398dde07673', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10f3a1278>]}
+2018-07-28 09:26:53,262: 09:26:53 | 5 of 12 OK created table model agency_data_pipeline_dev.ga_proc...... [OK in 7.29s]
+2018-07-28 09:26:53,264: 09:26:53 | 6 of 12 START table model agency_data_pipeline_dev.ga_stats.......... [RUN]
+2018-07-28 09:26:53,265: Compiling model.ga_conversion_index.ga_stats
+2018-07-28 09:26:53,287: Writing injected SQL for node "model.ga_conversion_index.ga_stats"
+2018-07-28 09:26:53,294: Acquiring new bigquery connection "ga_stats".
+2018-07-28 09:26:53,297: Re-using an available connection from the pool.
+2018-07-28 09:26:53,456: Writing runtime SQL for node "model.ga_conversion_index.ga_stats"
+2018-07-28 09:26:53,457: Fetching data for query ga_stats:
+create or replace table `agency_data_pipeline_dev`.`ga_stats`
+  
+  as (
+    SELECT  
+cast(date as date) date,
+b.account,
+b.site site,
+c.source source,
+c.medium medium,
+concat(a.source, ' / ', a.medium) source_medium,  
+case when c.platform is null then "Unmapped" else c.platform end as platform,
+case when c.channel is null then "Unmapped" else c.channel end as channel,
+url,
+sum(sessions) sessions,
+sum(goal_completions) goal_completions
+FROM `adp-apprenticeship`.`agency_data_pipeline_dev`.`ga_proc` a
+LEFT JOIN `adp-apprenticeship`.`agency_data_pipeline_dev`.`accounts_proc` b 
+ON ( a.bigquery_name = b.bigquery_name 
+	AND a.lookup_platform = b.platform )
+LEFT JOIN `adp-apprenticeship`.`agency_data_pipeline_dev`.`mappings_ga_proc` c
+ON ( a.source = c.source
+  AND a.medium = c.medium 
+  AND a.bigquery_name = c.bigquery_name )
+GROUP BY date, account, site, source, medium, source_medium, platform, channel, url
+  );
+
+    
+2018-07-28 09:26:58,161: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8c9b46a6-0c16-40b6-be9e-4398dde07673', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10f370048>]}
+2018-07-28 09:26:58,444: 09:26:58 | 6 of 12 OK created table model agency_data_pipeline_dev.ga_stats..... [OK in 4.90s]
+2018-07-28 09:26:58,447: 09:26:58 | 7 of 12 START table model agency_data_pipeline_dev.landing_page_by_month [RUN]
+2018-07-28 09:26:58,448: Compiling model.ga_conversion_index.landing_page_by_month
+2018-07-28 09:26:58,454: 09:26:58 | 8 of 12 START table model agency_data_pipeline_dev.platform_by_month. [RUN]
+2018-07-28 09:26:58,463: Writing injected SQL for node "model.ga_conversion_index.landing_page_by_month"
+2018-07-28 09:26:58,463: Compiling model.ga_conversion_index.platform_by_month
+2018-07-28 09:26:58,476: Writing injected SQL for node "model.ga_conversion_index.platform_by_month"
+2018-07-28 09:26:58,479: Acquiring new bigquery connection "landing_page_by_month".
+2018-07-28 09:26:58,479: Re-using an available connection from the pool.
+2018-07-28 09:26:58,500: Acquiring new bigquery connection "platform_by_month".
+2018-07-28 09:26:58,502: Re-using an available connection from the pool.
+2018-07-28 09:26:58,638: Writing runtime SQL for node "model.ga_conversion_index.landing_page_by_month"
+2018-07-28 09:26:58,657: Writing runtime SQL for node "model.ga_conversion_index.platform_by_month"
+2018-07-28 09:26:58,658: Fetching data for query landing_page_by_month:
+create or replace table `agency_data_pipeline_dev`.`landing_page_by_month`
+  
+  as (
+    SELECT
+yyyymm, 
+site,
+platform,
+channel, 
+url,
+sessions,
+sum(sessions) OVER w1 total_sessions,
+goal_completions,
+sum(goal_completions) OVER w1 total_goal_completions
+FROM (
+    SELECT 
+    FORMAT_DATE("%Y-%m", date) AS yyyymm,
+    site,
+    platform,
+    channel, 
+    url,
+    sum(sessions) sessions,
+    sum(goal_completions) goal_completions
+    FROM `adp-apprenticeship`.`agency_data_pipeline_dev`.`ga_stats`
+    GROUP BY yyyymm, site, platform, channel, url
+)
+WINDOW w1 as (PARTITION BY yyyymm, site)
+  );
+
+    
+2018-07-28 09:26:58,662: Fetching data for query platform_by_month:
+create or replace table `agency_data_pipeline_dev`.`platform_by_month`
+  
+  as (
+    SELECT
+yyyymm, 
+site,
+platform,
+channel, 
+sessions,
+sum(sessions) OVER w1 total_sessions,
+goal_completions,
+sum(goal_completions) OVER w1 total_goal_completions
+FROM (
+    SELECT 
+    FORMAT_DATE("%Y-%m", date) AS yyyymm,
+    site,
+    platform,
+    channel, 
+    sum(sessions) sessions,
+    sum(goal_completions) goal_completions
+    FROM `adp-apprenticeship`.`agency_data_pipeline_dev`.`ga_stats`
+    GROUP BY yyyymm, site, channel, platform
+)
+WINDOW w1 as (PARTITION BY yyyymm, site)
+  );
+
+    
+2018-07-28 09:27:01,783: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8c9b46a6-0c16-40b6-be9e-4398dde07673', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bf297f0>]}
+2018-07-28 09:27:01,790: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8c9b46a6-0c16-40b6-be9e-4398dde07673', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c8950b8>]}
+2018-07-28 09:27:04,296: 09:27:04 | 7 of 12 OK created table model agency_data_pipeline_dev.landing_page_by_month [OK in 3.34s]
+2018-07-28 09:27:05,223: 09:27:05 | 8 of 12 OK created table model agency_data_pipeline_dev.platform_by_month [OK in 3.33s]
+2018-07-28 09:27:05,223: 09:27:05 | 9 of 12 START table model agency_data_pipeline_dev.landing_page_index [RUN]
+2018-07-28 09:27:05,224: Compiling model.ga_conversion_index.landing_page_index
+2018-07-28 09:27:05,224: 09:27:05 | 10 of 12 START table model agency_data_pipeline_dev.platform_index... [RUN]
+2018-07-28 09:27:05,232: Writing injected SQL for node "model.ga_conversion_index.landing_page_index"
+2018-07-28 09:27:05,232: Compiling model.ga_conversion_index.platform_index
+2018-07-28 09:27:05,245: Writing injected SQL for node "model.ga_conversion_index.platform_index"
+2018-07-28 09:27:05,248: Acquiring new bigquery connection "platform_index".
+2018-07-28 09:27:05,248: Re-using an available connection from the pool.
+2018-07-28 09:27:05,251: Acquiring new bigquery connection "landing_page_index".
+2018-07-28 09:27:05,254: Re-using an available connection from the pool.
+2018-07-28 09:27:05,421: Writing runtime SQL for node "model.ga_conversion_index.platform_index"
+2018-07-28 09:27:05,428: Fetching data for query platform_index:
+create or replace table `agency_data_pipeline_dev`.`platform_index`
+  
+  as (
+    SELECT 
+yyyymm, 
+site,
+platform,
+channel, 
+sessions,
+pct_sessions,
+goal_completions,
+pct_goal_completions,
+case when pct_sessions > 0 then pct_goal_completions / pct_sessions else null end as conversion_index
+FROM (
+    SELECT
+    yyyymm, 
+    site,
+    platform,
+    channel, 
+    sessions,
+    case when total_sessions > 0 then sessions / total_sessions else null end as pct_sessions,
+    goal_completions,
+    case when total_goal_completions > 0 then goal_completions / total_goal_completions else null end as pct_goal_completions
+    FROM `adp-apprenticeship`.`agency_data_pipeline_dev`.`platform_by_month`
+)
+  );
+
+    
+2018-07-28 09:27:05,433: Writing runtime SQL for node "model.ga_conversion_index.landing_page_index"
+2018-07-28 09:27:05,437: Fetching data for query landing_page_index:
+create or replace table `agency_data_pipeline_dev`.`landing_page_index`
+  
+  as (
+    SELECT 
+yyyymm, 
+site,
+platform,
+channel, 
+url,
+sessions,
+pct_sessions,
+goal_completions,
+pct_goal_completions,
+case when pct_sessions > 0 then pct_goal_completions / pct_sessions else null end as conversion_index
+FROM (
+    SELECT
+    yyyymm, 
+    site,
+    platform,
+    channel, 
+    url,
+    sessions,
+    case when total_sessions > 0 then sessions / total_sessions else null end as pct_sessions,
+    goal_completions,
+    case when total_goal_completions > 0 then goal_completions / total_goal_completions else null end as pct_goal_completions
+    FROM `adp-apprenticeship`.`agency_data_pipeline_dev`.`landing_page_by_month`
+)
+  );
+
+    
+2018-07-28 09:27:07,941: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8c9b46a6-0c16-40b6-be9e-4398dde07673', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10f370048>]}
+2018-07-28 09:27:09,641: 09:27:09 | 9 of 12 OK created table model agency_data_pipeline_dev.landing_page_index [OK in 2.72s]
+2018-07-28 09:27:33,700: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8c9b46a6-0c16-40b6-be9e-4398dde07673', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c8aed30>]}
+2018-07-28 09:27:33,963: 09:27:33 | 10 of 12 OK created table model agency_data_pipeline_dev.platform_index [OK in 28.47s]
+2018-07-28 09:27:33,965: 09:27:33 | 11 of 12 START table model agency_data_pipeline_dev.platform_viz..... [RUN]
+2018-07-28 09:27:33,965: 09:27:33 | 12 of 12 START table model agency_data_pipeline_dev.landing_page_viz. [RUN]
+2018-07-28 09:27:33,965: Compiling model.ga_conversion_index.platform_viz
+2018-07-28 09:27:33,965: Compiling model.ga_conversion_index.landing_page_viz
+2018-07-28 09:27:33,990: Writing injected SQL for node "model.ga_conversion_index.landing_page_viz"
+2018-07-28 09:27:33,991: Writing injected SQL for node "model.ga_conversion_index.platform_viz"
+2018-07-28 09:27:33,994: Acquiring new bigquery connection "platform_viz".
+2018-07-28 09:27:33,994: Re-using an available connection from the pool.
+2018-07-28 09:27:33,995: Acquiring new bigquery connection "landing_page_viz".
+2018-07-28 09:27:33,996: Re-using an available connection from the pool.
+2018-07-28 09:27:34,163: Writing runtime SQL for node "model.ga_conversion_index.landing_page_viz"
+2018-07-28 09:27:34,165: Fetching data for query landing_page_viz:
+create or replace table `agency_data_pipeline_dev`.`landing_page_viz`
+  
+  as (
+    SELECT 
+yyyymm Month, 
+site Site,
+platform Platform,
+channel Channel, 
+url URL,
+ifnull(sessions, 0) Sessions,
+ifnull(pct_sessions, 0) PctSessions,
+ifnull(goal_completions, 0) GoalCompletions,
+ifnull(pct_goal_completions, 0) PctGoalCompletions,
+ifnull(conversion_index, 0) ConversionIndex
+FROM `adp-apprenticeship`.`agency_data_pipeline_dev`.`landing_page_index`
+  );
+
+    
+2018-07-28 09:27:34,223: Writing runtime SQL for node "model.ga_conversion_index.platform_viz"
+2018-07-28 09:27:34,224: Fetching data for query platform_viz:
+create or replace table `agency_data_pipeline_dev`.`platform_viz`
+  
+  as (
+    SELECT 
+yyyymm Month, 
+site Site,
+platform Platform,
+channel Channel, 
+ifnull(sessions, 0) Sessions,
+ifnull(pct_sessions, 0) PctSessions,
+ifnull(goal_completions, 0) GoalCompletions,
+ifnull(pct_goal_completions, 0) PctGoalCompletions,
+ifnull(conversion_index, 0) ConversionIndex
+FROM `adp-apprenticeship`.`agency_data_pipeline_dev`.`platform_index`
+WHERE yyyymm >= '2017-06'
+  );
+
+    
+2018-07-28 09:27:35,837: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8c9b46a6-0c16-40b6-be9e-4398dde07673', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bf297f0>]}
+2018-07-28 09:27:36,180: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8c9b46a6-0c16-40b6-be9e-4398dde07673', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c8950b8>]}
+2018-07-28 09:27:36,916: 09:27:36 | 11 of 12 OK created table model agency_data_pipeline_dev.platform_viz [OK in 1.87s]
+2018-07-28 09:27:37,231: 09:27:37 | 12 of 12 OK created table model agency_data_pipeline_dev.landing_page_viz [OK in 2.21s]
+2018-07-28 09:27:37,295: 09:27:37 | 
+2018-07-28 09:27:37,295: 09:27:37 | Finished running 12 table models in 60.83s.
+2018-07-28 09:27:37,295: Connection 'master' was left open.
+2018-07-28 09:27:37,296: 
+2018-07-28 09:27:37,296: Completed successfully
+2018-07-28 09:27:37,296: 
+Done. PASS=12 ERROR=0 SKIP=0 TOTAL=12
+2018-07-28 09:27:37,297: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10f2df2b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10f331e10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10f331be0>]}
+2018-07-28 09:27:37,575: Flushing usage events
+2018-07-28 09:27:37,831: sys:1: ResourceWarning: unclosed <socket.socket fd=12, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.5.50.21', 57974), raddr=('172.217.3.10', 443)>
+
+2018-07-28 09:27:37,831: sys:1: ResourceWarning: unclosed <socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.5.50.21', 57972), raddr=('172.217.2.13', 443)>
+
+2018-07-28 09:27:37,832: sys:1: ResourceWarning: unclosed <socket.socket fd=15, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.5.50.21', 57975), raddr=('172.217.2.13', 443)>
+
+2018-07-28 09:27:37,832: sys:1: ResourceWarning: unclosed <socket.socket fd=13, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.5.50.21', 57976), raddr=('172.217.2.13', 443)>
+
+2018-07-28 09:27:37,833: sys:1: ResourceWarning: unclosed <socket.socket fd=14, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.5.50.21', 57978), raddr=('172.217.3.10', 443)>
+
+2018-07-28 09:27:37,833: sys:1: ResourceWarning: unclosed <socket.socket fd=18, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.5.50.21', 57979), raddr=('172.217.3.10', 443)>
+
+2018-07-28 09:27:37,833: sys:1: ResourceWarning: unclosed <socket.socket fd=17, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.5.50.21', 57980), raddr=('172.217.3.10', 443)>
+
+2018-07-28 09:27:37,833: sys:1: ResourceWarning: unclosed <socket.socket fd=16, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.5.50.21', 57977), raddr=('172.217.2.13', 443)>
+
