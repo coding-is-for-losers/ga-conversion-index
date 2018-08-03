@@ -1,5 +1,5 @@
 # Google Analytics Conversion Indexing
-SQL models (in the DBT framework) for calculating top-performing channels and landing pages from Google Analytics data.
+SQL models (in the [DBT](https://getdbt.com) framework) for calculating top-performing channels and landing pages from Google Analytics data.
 
 To get set up...
 
