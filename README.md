@@ -8,7 +8,7 @@ These models leverage the [Agency Data Pipeline](https://codingisforlosers.com/a
 3. The DBT SQL framework to model raw data into tables of metrics, and [Sinter](https://sinterdata.com) to run them from ‘le cloud’
 4. [A Data Studio template](https://datastudio.google.com/u/0/reporting/1SEDAx62zeht3hN3-0DZmHqkvCARWcyek/page/JsbF) to visualize it all
 
-To get set up, read the blog post at
+To get set up, read the blog post at:
 
 https://codingisforlosers.com/google-analytics-bigquery-data-pipeline
 
